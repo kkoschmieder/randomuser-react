@@ -1,25 +1,46 @@
-import logo from './logo.svg';
+import { useState, useEffect} from 'react';
 import './App.css';
+import RandomUser from './RandomUser.jsx';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const API_URL = 'https://randomuser.me/api/?inc=gender,name,nat,dob,picture,phone'; //RandomUser API
+
+const App = () => {
+
+  const [randomUser, setRandomUser] = useState([]);
+
+  const getUserData = async() => {
+      const response = await fetch(`${API_URL}`);
+      const userData = await response.json();
+      setRandomUser(userData.results[0]);
+  }
+
+  useEffect(() => {
+    getUserData();
+  }, []);
+
+    return (
+      <div className='app'>
+        <h1 className='appTitle'>RandomUser Card Generator</h1>
+        <div className='userCard'>
+          {
+            randomUser != 0
+            ? (
+              <div className='container'>
+                <RandomUser user={randomUser}/>
+              </div>
+            ) : (
+              <div className='empty'>
+                <p>No user data (data fetch failed?)</p>
+              </div>
+            )
+          }
+        </div>
+        <button 
+          className='getUser'
+          onClick={() => getUserData()}
+          >Randomize User</button>
+      </div>
+    );
+};
 
 export default App;
