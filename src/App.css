@@ -14,7 +14,7 @@ body {
 }
 
 .userCard {
-    background: rgba(209, 209, 209, .25);
+    background: rgba(226, 240, 255, 0.25);
     width: 600px;
     height: 500px;
     display: block;
@@ -22,6 +22,14 @@ body {
     border-radius: 16px;
     position: relative;
     box-shadow: 0 5px 3px 0 rgba(33, 33, 33, .75);
+}
+
+.bright, .dark {
+    padding: 12px;
+}
+
+.bright {
+    background: #e0eef7;
 }
 
 .userPicture {
@@ -41,9 +49,10 @@ body {
 .userData {
     position: absolute;
     top: 128px;
-    margin-left: 64px;
-    font-size: 24px;
+    text-align: left;
+    font-size: 26px;
     color: #2c2c2c;
+    width: 100%;
 }
 
 .getUser {
