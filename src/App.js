@@ -2,7 +2,7 @@ import { useState, useEffect} from 'react';
 import './App.css';
 import RandomUser from './RandomUser.jsx';
 
-const API_URL = 'https://randomuser.me/api/?inc=gender,name,nat,dob,picture,phone'; //RandomUser API
+const API_URL = 'https://randomuser.me/api/?inc=name,nat,dob,picture,phone,email'; //RandomUser API
 
 const App = () => {
 

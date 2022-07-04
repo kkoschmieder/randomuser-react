@@ -6,11 +6,10 @@ const RandomUser = ({user}) => {
         <div className='userCard'>
             <img className='userPicture' src={user?.picture.large} />
             <div className='userData'>
-                <h2 className='bright'>Name: {user?.name.title} {user?.name.first} {user?.name.last}</h2>
-                <h2 className='dark'>Gender: {user?.gender}</h2>
-                <h2 className='bright'>Date of Birth: {dateMinimized}</h2>
-                <h2 className='dark'>Age: {user?.dob.age}</h2>
-                <h2 className='bright'>Phone: {user?.phone}</h2>
+                <h2 className='bright'>{user?.name.title} {user?.name.first} {user?.name.last}, {user?.nat}</h2>
+                <h2 className='bright'>{dateMinimized}, {user?.dob.age}</h2>
+                <h2 className='bright'>{user?.email}</h2>
+                <h2 className='bright'>{user?.phone}</h2>
             </div>
         </div>
     );

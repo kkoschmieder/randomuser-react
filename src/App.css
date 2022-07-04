@@ -4,8 +4,9 @@
 }
 
 body {
-    background: #fff;
+    background: #EFEFEF;
     font-family: 'Roboto', sans-serif;
+    color: #474747;
 }
 
 .appTitle {
@@ -14,62 +15,54 @@ body {
 }
 
 .userCard {
-    background: rgba(226, 240, 255, 0.25);
-    width: 600px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     display: block;
-    margin: 128px auto 32px auto;
-    border-radius: 16px;
+    margin: 200px auto 64px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 10px 1px #b9b9b9;
     position: relative;
-    box-shadow: 0 5px 3px 0 rgba(33, 33, 33, .75);
-}
-
-.bright, .dark {
-    padding: 12px;
-}
-
-.bright {
-    background: #e0eef7;
 }
 
 .userPicture {
     display: block;
+    width: 150px;
     margin: 0 auto;
-    width: 192px;
-    height: auto;
-    border-radius: 50%;
     position: absolute;
-    top: -92px;
+    top: 32px;
     left: 0;
     right: 0;
-    box-shadow: 0 5px 3px 0 rgba(33, 33, 33, .75);
-
+    border-radius: 50%;
+    box-shadow: 0 2px 10px 2px #979797;
 }
 
 .userData {
     position: absolute;
-    top: 128px;
-    text-align: left;
-    font-size: 26px;
-    color: #2c2c2c;
-    width: 100%;
+    top: 200px;
+    font-size: 20px;
+    width: 95%;
+    text-align: justify;
+    margin: 0 16px 8px 16px;
+    line-height: 48px;
+    word-wrap: break-word;
 }
 
 .getUser {
-    font-size: 32px;
-    padding: 16px;
     display: block;
-    color: white;
     margin: 0 auto;
+    background: #474747;
+    padding: 24px;
+    color: #fff;
+    font-size: 24px;
     border-radius: 8px;
-    background: #545555;
     border: none;
 }
 
 .getUser:hover {
-    background: #353535;
+    background: #575757;
 }
 
 .getUser:active {
-    background: #242424;
+    background: #676767;
 }
