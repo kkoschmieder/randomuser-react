@@ -1,7 +1,7 @@
 import React from 'react'
 
 const RandomUser = ({user}) => {
-    let dateMinimized = user?.dob.date.slice(0, -14);
+    let dateMinimized = user?.dob.date.slice(0, -14); //Shortening the date of birth by time and time zone (it's length is always 14 chars)
     return (
         <div className='userCard'>
             <img className='userPicture' src={user?.picture.large} />
